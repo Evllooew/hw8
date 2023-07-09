@@ -598,7 +598,7 @@ public class Main {
 
             pot = pot + pot * percent / 100;
 
-            System.out.println("Сумма накоплений после " + i + " - го полугодия: " + pot + " рублей");
+            System.out.println("Сумма накоплений после  " + i + " - го полугодия: " + pot + " рублей");
 
         }
     }
