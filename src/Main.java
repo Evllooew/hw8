@@ -35,7 +35,6 @@ public class Main {
         task33();
         task34();
         task35();
-        task36();
 
 
     }
@@ -112,8 +111,7 @@ public class Main {
         byte eggs = 4;
         byte eggGram = 70;
 
-        int cocktail = ((bananas * bananaGram) + (milk * milk100MlGram) + (iceCreamBriquette + iceCreamBriquettegram) +
-                (eggs * eggGram));
+        int cocktail = ((bananas * bananaGram) + (milk * milk100MlGram) + (iceCreamBriquette + iceCreamBriquettegram) + (eggs * eggGram));
 
 
         System.out.println(cocktail + " грамм в спорткоктейле");
@@ -523,17 +521,19 @@ public class Main {
         System.out.println("Задача 1");
 
         int salary = 15000;
-        int total = 0;
+        int piggyBank = 0;
         int i = 0;
+        int goal = 2_459_000;
 
-        while (total < 2_459_000) {
+        while (piggyBank < goal) {
 
             i = i + 1;
-            total = total + total / 100;
-            total = total + salary;
-            System.out.println("Месяц " + i + " Итого  " + total);
+
+            piggyBank = piggyBank + salary;
+
+            System.out.println("Месяц " + i + " Итого  " + piggyBank);
+
         }
-        System.out.println(total);
 
     }
 
@@ -548,7 +548,7 @@ public class Main {
         }
         System.out.println();
 
-        for (int e = 10; e > 0; e = e - 1) {
+        for (int e = 10; e > 0; e--) {
             System.out.print(" " + e + " ");
         }
     }
@@ -571,15 +571,16 @@ public class Main {
 
         System.out.println("Задача 4");
         int pot = 15000;
-        int totalsave = 0;
+        int goal = 12_000_000;
+        int percentages = 7;
+        int piggyBank = 0;
         int i = 0;
-        while (totalsave <= 12_000_000) {
+        while (piggyBank <= goal) {
             i = i + 1;
-            totalsave = totalsave + totalsave / 7;
-            totalsave = totalsave + pot;
+            piggyBank = piggyBank + piggyBank * percentages / 100;
+            piggyBank = piggyBank + pot;
             if (i % 6 == 0) {
-                System.out.println("Месяц" + i + "сумма накоплений равна " + totalsave + "рублей");
-                System.out.println(totalsave + " рублей");
+                System.out.println("Месяц " + i + " сумма накоплений равна " + piggyBank + " рублей");
             }
         }
     }
@@ -589,12 +590,15 @@ public class Main {
 
 
         int pot = 15000;
-        int month = 18;
         int percent = 7;
+        int years = 9;
+        int month = years * 12;
+
         for (int i = 1; i <= month; i++) {
 
-            pot = pot + pot / 7;
-            System.out.println("Сумма накоплений после " + i + " - го полугодия: " + pot + " рублей");
+            pot = pot + pot * percent / 100;
+
+            System.out.println("Сумма накоплений после  " + i + " - го полугодия: " + pot + " рублей");
 
         }
     }
@@ -622,11 +626,6 @@ public class Main {
 
             }
         }
-    }
-
-    public static void task36() {
-
-
     }
 
 
