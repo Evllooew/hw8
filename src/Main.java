@@ -523,13 +523,17 @@ public class Main {
         int salary = 15000;
         int piggyBank = 0;
         int i = 0;
+        int goal = 2_459_000;
 
-        while (piggyBank < 2_459_000) {
+        while (piggyBank < goal) {
+
             i = i + 1;
+
             piggyBank = piggyBank + salary;
+
             System.out.println("Месяц " + i + " Итого  " + piggyBank);
+
         }
-        System.out.println(piggyBank);
 
     }
 
@@ -567,10 +571,11 @@ public class Main {
 
         System.out.println("Задача 4");
         int pot = 15000;
+        int goal = 12_000_000;
         int percentages = 7;
         int piggyBank = 0;
         int i = 0;
-        while (piggyBank <= 12_000_000) {
+        while (piggyBank <= goal) {
             i = i + 1;
             piggyBank = piggyBank + piggyBank * percentages / 100;
             piggyBank = piggyBank + pot;
@@ -591,7 +596,8 @@ public class Main {
 
         for (int i = 1; i <= month; i++) {
 
-            pot = pot + pot / percent;
+            pot = pot + pot * percent / 100;
+
             System.out.println("Сумма накоплений после " + i + " - го полугодия: " + pot + " рублей");
 
         }
